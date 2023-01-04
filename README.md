@@ -216,6 +216,28 @@ QLineEdit {
 
 ```
 
+## 细节图示
+
+Login class model:
+
+![Model1!login_model_0](README.assets/Model1!login_model_0.png)
+
+StuScore class model:
+
+![Model2!stuscore_mocel_1](README.assets/Model2!stuscore_mocel_1.png)
+
+用户登录实现流程图：
+
+![Flowchart1!login_2](README.assets/Flowchart1!login_2.png)
+
+数据库展示在表格上具体实现流程图：
+
+![Flowchart2!show_table_3](README.assets/Flowchart2!show_table_3.png)
+
+插入数据功能实现流程图：
+
+![Flowchart3!button_insert_4](README.assets/Flowchart3!button_insert_4.png)
+
 ## 参考
 
 Qt环境搭建及项目运行：
