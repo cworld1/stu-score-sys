@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StuScore</class>
+ <widget class="QMainWindow" name="StuScore">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Semibold</family>
+    <pointsize>10</pointsize>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>学生成绩管理</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 主窗口 */
+QMainWindow {
+  background-color: #f5f8fb;
+}
+
+/* 常规提示字体 */
+QLabel {
+  font-family: &quot;Microsoft YaHei&quot;;
+  color: #474747;
+}
+/* 标题 */
+QLabel#label_title {
+  letter-spacing: 1px;
+  color: #164276;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+/* 表格 */
+QTableWidget {
+  gridline-color: transparent;
+  border-radius: 6px;
+}
+QHeaderView {
+  border: none;
+  border-bottom: 1px solid #e6eff7;
+  background-color: #ffffff;
+}
+QHeaderView::section {
+  font-family: &quot;Microsoft YaHei&quot;;
+  color: #8ea6c1;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #e6eff7;
+  height: 40px;
+}
+QTableView QTableCornerButton::section {
+  background: #ffffff;
+  border: none;
+  border-bottom: 2px solid #e6eff7;
+}
+QTableWidget::item {
+  font-family: &quot;Microsoft YaHei&quot;;
+  border: none;
+  border-bottom: 1px solid #e6eff7;
+}
+
+/* 按钮 */
+QPushButton {
+  padding: 1px 8px;
+  font-family: &quot;Microsoft YaHei&quot;;
+  border: none;
+  border-radius: 6px;
+  background-color: #d8eafe;
+  color: #4499fe;
+}
+QPushButton:hover,
+QPushButton:avtive {
+  background-color: #4499fe;
+  color: #fff;
+}
+
+/* 输入框 */
+QLineEdit {
+  font-family: &quot;Microsoft YaHei&quot;;
+  border: none;
+  border-bottom: 2px solid #dfe9f6;
+  background: transparent;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="button_edit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>390</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>编辑</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_insert">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>390</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>插入数据</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="placeholderText">
+     <string>输入要删除的学号</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_save">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>390</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>更新并保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_delete">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>430</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>删除数据</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>390</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>10</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 100, 0);</string>
+    </property>
+    <property name="text">
+     <string>当前为：浏览模式</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>741</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <row>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>10</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>学号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>姓名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>班级</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>语文</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>数学</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>英语</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>平均</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="button_exit">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>430</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>学生成绩管理系统</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_summary">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>390</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>成绩汇总</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
