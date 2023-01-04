@@ -4,6 +4,8 @@
 [![GitHub license](https://img.shields.io/github/license/cworld1/stu-score-sys?style=flat-square)](https://github.com/cworld1/stu-score-sys/blob/master/LICENSE)
 [![Release version](https://img.shields.io/github/v/release/cworld1/stu-score-sys?style=flat-square)](https://github.com/cworld1/stu-score-sys/releases/latest)
 
+这是一个使用 Qt 构建、C++ 作为底层开发的学生成绩管理系统，支持对学生成绩的增删改查、排序、汇总等功能。
+
 ## 下载
 
 前往 [Release](https://github.com/cworld1/stu-score-sys/releases/latest) 下载最新版本。
